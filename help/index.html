@@ -1,11 +1,11 @@
 <!doctype html>
-<html lang="ja">
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Yoyu の使い方 / How Yoyu works</title>
+    <title>How Yoyu works</title>
     <style>
-      body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans JP", sans-serif; line-height: 1.7; color: #172033; background: #ffffff; }
+      body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; line-height: 1.7; color: #172033; background: #ffffff; }
       main { max-width: 760px; margin: 0 auto; padding: 48px 20px; }
       h1 { margin-top: 0; }
       h2 { margin-top: 36px; }
@@ -14,72 +14,36 @@
       .term { font-weight: 600; }
       .dot { display:inline-block; width:14px; height:14px; border-radius:50%; vertical-align:middle; margin-right:6px; }
       .note { background:#f4f7fb; border:1px solid #e3e8f0; border-radius:12px; padding:14px 16px; margin-top:12px; font-size:15px; }
-      hr { border:none; border-top:1px solid #e3e8f0; margin:40px 0; }
-      .lang-link { font-size:14px; }
     </style>
   </head>
   <body>
     <main>
-      <section lang="ja">
-        <p class="lang-link"><a href="#en">English ↓</a></p>
-        <h1>Yoyu の使い方</h1>
-        <p>Yoyu は、目標の時刻から逆算して「いつ出ればいいか」を色で教える出発タイマーです。最初に決めるのは、たった3つだけ。あとは毎朝、開くだけです。</p>
+      <h1>How Yoyu works</h1>
+      <p>Yoyu is a departure timer. It counts back from your target time and uses color to tell you when to leave. You set three things once, then you only open it each morning.</p>
 
-        <h2>設定する3つ</h2>
-        <h3>目標時刻</h3>
-        <p>着きたい時刻、または始まる時刻です。</p>
-        <h3>移動時間（分）</h3>
-        <p>そこまで、普段どれくらいかかるか。いつもの体感でかまいません。</p>
-        <h3>余裕時間（分）</h3>
-        <p>直前で慌てないための、自分用のゆとりです。多めにすると、早めに「出て」と言われます。</p>
-        <p class="note">「黄色になる時間（分）」だけは別物で、<b>残りがこの時間を切ったら黄色（そろそろ）に変わる</b>タイミングの設定です。</p>
+      <h2>The three settings</h2>
+      <h3>Target time</h3>
+      <p>When you need to arrive, or when something starts.</p>
+      <h3>Travel time (min)</h3>
+      <p>How long it usually takes you to get there. Your own everyday estimate is enough.</p>
+      <h3>Extra time (min)</h3>
+      <p>A buffer so you are not rushed at the last second. A bigger buffer means Yoyu tells you to leave earlier.</p>
+      <p class="note">Time until yellow is different. It sets when the screen turns yellow as your remaining time runs low.</p>
 
-        <h2>画面の見方</h2>
-        <p>大きな数字は、<span class="term">出発リミットまでの残り時間</span>です（過ぎていれば、超過した時間）。</p>
-        <p><span class="term">出発リミット ＝ 目標時刻 −（移動時間 ＋ 余裕時間）</span>。この時刻に出れば間に合う、という線です。</p>
-        <h3>「補正 ＋◯分」って？</h3>
-        <p>数字の下に出る「補正」は、<b>移動時間と余裕時間を足した合計</b>です。目標時刻から、この分だけ早めに出発リミットを置いている、という目安。たとえば移動6分＋余裕2分なら「補正 ＋8分」と出ます。設定を変えれば、ここも一緒に変わります。</p>
+      <h2>Reading the screen</h2>
+      <p>The big number is the <span class="term">time left until your departure limit</span>. After you pass it, the number shows how far over you are.</p>
+      <p><span class="term">Departure limit = Target time - (Travel time + Extra time)</span>.</p>
+      <h3>What is OFFSET?</h3>
+      <p>OFFSET is your travel time plus your buffer. For example, travel 6 minutes plus buffer 2 minutes shows OFFSET +8m.</p>
 
-        <h2>色の意味</h2>
-        <p><span class="dot" style="background:#00C853"></span><span class="term">緑（間に合う）</span> … まだ余裕があります。</p>
-        <p><span class="dot" style="background:#FFB300"></span><span class="term">黄（そろそろ）</span> … 残りが「黄色になる時間」を切りました。</p>
-        <p><span class="dot" style="background:#FF1744"></span><span class="term">赤（遅れ）</span> … 出発リミットを過ぎました。</p>
-        <p class="note">赤は「<b>あなたが決めた“余裕込みの出発時刻”を過ぎた</b>」という意味です。設定した余裕の範囲内なら、まだ間に合うこともあります。<br>「余裕時間」を <b>0</b> にすれば、赤はそのまま「本当の遅刻」を表すようになります。ここはお好みで調整してください。</p>
+      <h2>What the colors mean</h2>
+      <p><span class="dot" style="background:#00C853"></span><span class="term">Green</span>: you have time to spare.</p>
+      <p><span class="dot" style="background:#FFB300"></span><span class="term">Yellow</span>: your remaining time dropped below the yellow threshold.</p>
+      <p><span class="dot" style="background:#FF1744"></span><span class="term">Red</span>: you are past your departure limit.</p>
+      <p class="note">Red means you are past the leave-by time you set, including your buffer. If you are still within that buffer, you may still arrive on time. Set Extra time to 0 if you want red to mean truly late.</p>
 
-        <h2>こんな使い方</h2>
-        <p>毎日同じ道なら、最初に一度だけ設定すれば十分。地図も交通情報も使わないので、開いた瞬間に答えが出ます。</p>
-      </section>
-
-      <hr>
-
-      <section lang="en" id="en">
-        <h1>How Yoyu works</h1>
-        <p>Yoyu is a departure timer. It counts back from your target time and uses color to tell you when to leave. You set just three things once — then you only open it each morning.</p>
-
-        <h2>The three settings</h2>
-        <h3>Target time</h3>
-        <p>When you need to arrive, or when it starts.</p>
-        <h3>Travel time (min)</h3>
-        <p>How long it usually takes you to get there. Your own sense of it is fine.</p>
-        <h3>Extra time (min)</h3>
-        <p>A buffer you keep so you are not rushed at the last second. A bigger buffer means Yoyu tells you to leave earlier.</p>
-        <p class="note">“Time until yellow (min)” is different: it sets <b>when the screen turns yellow (“get moving”)</b> as your remaining time runs low.</p>
-
-        <h2>Reading the screen</h2>
-        <p>The big number is the <span class="term">time left until your departure limit</span> (or, once you pass it, how far over you are).</p>
-        <p><span class="term">Departure limit = Target time − (Travel time + Extra time)</span>. Leave by then and you make it.</p>
-        <h3>What is “OFFSET +◯m”?</h3>
-        <p>The “OFFSET” under the number is simply your <b>travel time plus your buffer, added together</b> — how far ahead of your target the departure limit sits. Travel 6 + buffer 2 shows “OFFSET +8m”. Change your settings and this changes with them.</p>
-
-        <h2>What the colors mean</h2>
-        <p><span class="dot" style="background:#00C853"></span><span class="term">Green (On time)</span> … you have time to spare.</p>
-        <p><span class="dot" style="background:#FFB300"></span><span class="term">Yellow (Hurry)</span> … your remaining time dropped below “Time until yellow”.</p>
-        <p><span class="dot" style="background:#FF1744"></span><span class="term">Red (Late)</span> … you are past your departure limit.</p>
-        <p class="note">Red means you are <b>past the leave-by time you set, buffer included</b>. If you are still within that buffer, you may well make it. Set <b>Extra time to 0</b> and red will mean truly late instead. Tune it to your taste.</p>
-
-        <h2>The idea</h2>
-        <p>For a route you take every day, setting it once is enough. No maps, no traffic — the answer is there the moment you open the app.</p>
-      </section>
+      <h2>The idea</h2>
+      <p>For a route you take every day, setting it once is enough. No maps, no traffic, and no account required.</p>
     </main>
   </body>
 </html>
